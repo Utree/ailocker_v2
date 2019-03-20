@@ -12,6 +12,7 @@
 		3F218C09223FA3BA0006E5F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F218C07223FA3BA0006E5F3 /* Main.storyboard */; };
 		3F218C0B223FA3BB0006E5F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F218C0A223FA3BB0006E5F3 /* Assets.xcassets */; };
 		3F218C0E223FA3BB0006E5F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F218C0C223FA3BB0006E5F3 /* LaunchScreen.storyboard */; };
+		3F39C84E22423D48000B402F /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 3F39C84D22423D48000B402F /* Resources */; };
 		E89D4180A3AB8221D8883365 /* Pods_AiLocker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B6EDE413F4526371D7224 /* Pods_AiLocker.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		3F218C0A223FA3BB0006E5F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F218C0D223FA3BB0006E5F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F218C0F223FA3BC0006E5F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F39C84D22423D48000B402F /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Resources; path = ../../../../../Users/sekiya/Downloads/Resources; sourceTree = "<group>"; };
 		7B916213AAF7518308A1D8F5 /* Pods-AiLocker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiLocker.release.xcconfig"; path = "Pods/Target Support Files/Pods-AiLocker/Pods-AiLocker.release.xcconfig"; sourceTree = "<group>"; };
 		BDEF75A70D56B44811379FC8 /* Pods-AiLocker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiLocker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AiLocker/Pods-AiLocker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +67,7 @@
 				3F218C05223FA3BA0006E5F3 /* ViewController.swift */,
 				3F218C07223FA3BA0006E5F3 /* Main.storyboard */,
 				3F218C0A223FA3BB0006E5F3 /* Assets.xcassets */,
+				3F39C84D22423D48000B402F /* Resources */,
 				3F218C0C223FA3BB0006E5F3 /* LaunchScreen.storyboard */,
 				3F218C0F223FA3BC0006E5F3 /* Info.plist */,
 			);
@@ -148,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F39C84E22423D48000B402F /* Resources in Resources */,
 				3F218C0E223FA3BB0006E5F3 /* LaunchScreen.storyboard in Resources */,
 				3F218C0B223FA3BB0006E5F3 /* Assets.xcassets in Resources */,
 				3F218C09223FA3BA0006E5F3 /* Main.storyboard in Resources */,
