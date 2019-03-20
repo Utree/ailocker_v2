@@ -14,6 +14,7 @@
 		3F218C0E223FA3BB0006E5F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F218C0C223FA3BB0006E5F3 /* LaunchScreen.storyboard */; };
 		3F39C85E22426913000B402F /* setting_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3F39C85D22426913000B402F /* setting_icon.svg */; };
 		3F39C86022426D1B000B402F /* KeyChainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39C85F22426D1B000B402F /* KeyChainController.swift */; };
+		3F39C8622242B734000B402F /* .env in Resources */ = {isa = PBXBuildFile; fileRef = 3F39C8612242B733000B402F /* .env */; };
 		E89D4180A3AB8221D8883365 /* Pods_AiLocker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B6EDE413F4526371D7224 /* Pods_AiLocker.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		3F218C0F223FA3BC0006E5F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F39C85D22426913000B402F /* setting_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = setting_icon.svg; sourceTree = "<group>"; };
 		3F39C85F22426D1B000B402F /* KeyChainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainController.swift; sourceTree = "<group>"; };
+		3F39C8612242B733000B402F /* .env */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .env; sourceTree = SOURCE_ROOT; };
 		7B916213AAF7518308A1D8F5 /* Pods-AiLocker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiLocker.release.xcconfig"; path = "Pods/Target Support Files/Pods-AiLocker/Pods-AiLocker.release.xcconfig"; sourceTree = "<group>"; };
 		BDEF75A70D56B44811379FC8 /* Pods-AiLocker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiLocker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AiLocker/Pods-AiLocker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 				3F39C85D22426913000B402F /* setting_icon.svg */,
 				3F218C0F223FA3BC0006E5F3 /* Info.plist */,
 				3F39C85F22426D1B000B402F /* KeyChainController.swift */,
+				3F39C8612242B733000B402F /* .env */,
 			);
 			path = AiLocker;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F39C8622242B734000B402F /* .env in Resources */,
 				3F39C85E22426913000B402F /* setting_icon.svg in Resources */,
 				3F218C0E223FA3BB0006E5F3 /* LaunchScreen.storyboard in Resources */,
 				3F218C0B223FA3BB0006E5F3 /* Assets.xcassets in Resources */,

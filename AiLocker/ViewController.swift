@@ -18,6 +18,11 @@ class ViewController: UIViewController {
         let settingSVG = SVGKImage(named: "setting_icon.svg")
         settingSVG?.size = settingButton.bounds.size
         settingButton.setImage(settingSVG?.uiImage, for: .normal)
+        
+        // 環境変数をセット
+        let env = ProcessInfo.processInfo.environment
+        saveKeyChain(key: "URL", value: env["SERVER_URL"]!)
+        print(getKeyChain(key: "URL") ?? "failed")
     }
 
     @IBAction func onClickSettingButton(_ sender: Any) {
