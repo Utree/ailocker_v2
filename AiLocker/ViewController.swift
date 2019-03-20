@@ -29,7 +29,10 @@ class ViewController: UIViewController {
         }
         // 登録ボタン
         let action1 = UIAlertAction(title: "登録", style: UIAlertAction.Style.default, handler: { Void in
-            print("アクション１をタップした時の処理")
+            if let url = alert.textFields?.first?.text {
+                saveKeyChain(key: "URL", value: url)
+                print(getKeyChain(key: "URL") ?? "failed")
+            }
         })
         // キャンセルボタン
         let cancel = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler: nil)
