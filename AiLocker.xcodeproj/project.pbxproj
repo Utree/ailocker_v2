@@ -12,9 +12,11 @@
 		3F218C09223FA3BA0006E5F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F218C07223FA3BA0006E5F3 /* Main.storyboard */; };
 		3F218C0B223FA3BB0006E5F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F218C0A223FA3BB0006E5F3 /* Assets.xcassets */; };
 		3F218C0E223FA3BB0006E5F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F218C0C223FA3BB0006E5F3 /* LaunchScreen.storyboard */; };
+		E89D4180A3AB8221D8883365 /* Pods_AiLocker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B6EDE413F4526371D7224 /* Pods_AiLocker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D2B6EDE413F4526371D7224 /* Pods_AiLocker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AiLocker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F218C00223FA3BA0006E5F3 /* AiLocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiLocker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F218C03223FA3BA0006E5F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F218C05223FA3BA0006E5F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		3F218C0A223FA3BB0006E5F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F218C0D223FA3BB0006E5F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F218C0F223FA3BC0006E5F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B916213AAF7518308A1D8F5 /* Pods-AiLocker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiLocker.release.xcconfig"; path = "Pods/Target Support Files/Pods-AiLocker/Pods-AiLocker.release.xcconfig"; sourceTree = "<group>"; };
+		BDEF75A70D56B44811379FC8 /* Pods-AiLocker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiLocker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AiLocker/Pods-AiLocker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E89D4180A3AB8221D8883365 /* Pods_AiLocker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				3F218C02223FA3BA0006E5F3 /* AiLocker */,
 				3F218C01223FA3BA0006E5F3 /* Products */,
+				9A238123D167BCAFF4B678C2 /* Pods */,
+				58DF45B11B8C297EF7F1B4A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = AiLocker;
 			sourceTree = "<group>";
 		};
+		58DF45B11B8C297EF7F1B4A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D2B6EDE413F4526371D7224 /* Pods_AiLocker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A238123D167BCAFF4B678C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDEF75A70D56B44811379FC8 /* Pods-AiLocker.debug.xcconfig */,
+				7B916213AAF7518308A1D8F5 /* Pods-AiLocker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F218C12223FA3BC0006E5F3 /* Build configuration list for PBXNativeTarget "AiLocker" */;
 			buildPhases = (
+				9371329E088E513A0073945B /* [CP] Check Pods Manifest.lock */,
 				3F218BFC223FA3BA0006E5F3 /* Sources */,
 				3F218BFD223FA3BA0006E5F3 /* Frameworks */,
 				3F218BFE223FA3BA0006E5F3 /* Resources */,
+				C115F9882BEAA857A199A080 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9371329E088E513A0073945B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AiLocker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C115F9882BEAA857A199A080 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AiLocker/Pods-AiLocker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/SVGKit/SVGKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVGKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AiLocker/Pods-AiLocker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3F218BFC223FA3BA0006E5F3 /* Sources */ = {
@@ -280,6 +347,7 @@
 		};
 		3F218C13223FA3BC0006E5F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDEF75A70D56B44811379FC8 /* Pods-AiLocker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +366,7 @@
 		};
 		3F218C14223FA3BC0006E5F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B916213AAF7518308A1D8F5 /* Pods-AiLocker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
