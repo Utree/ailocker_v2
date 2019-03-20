@@ -14,14 +14,30 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // 設定ボタンをセット
         let settingSVG = SVGKImage(named: "setting_icon.svg")
         settingSVG?.size = settingButton.bounds.size
         settingButton.setImage(settingSVG?.uiImage, for: .normal)
     }
 
     @IBAction func onClickSettingButton(_ sender: Any) {
+        // アラートのインスタンス
+        let alert = UIAlertController(title:"URLを変更", message: "", preferredStyle: .alert)
+        // アラートにテキストフィールドを追加
+        alert.addTextField { textField in
+            textField.placeholder = "https://www.example.com"
+        }
+        // 登録ボタン
+        let action1 = UIAlertAction(title: "登録", style: UIAlertAction.Style.default, handler: { Void in
+            print("アクション１をタップした時の処理")
+        })
+        // キャンセルボタン
+        let cancel = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler: nil)
         
+        alert.addAction(action1)
+        alert.addAction(cancel)
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
