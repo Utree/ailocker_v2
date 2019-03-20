@@ -10,13 +10,19 @@ import UIKit
 import SVGKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var svgImageView: UIImageView!
+    @IBOutlet weak var settingButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let settingSVG = SVGKImage(named: "setting_icon.svg")
+        settingSVG?.size = settingButton.bounds.size
+        settingButton.setImage(settingSVG?.uiImage, for: .normal)
     }
 
-
+    @IBAction func onClickSettingButton(_ sender: Any) {
+        
+    }
+    
 }
 
