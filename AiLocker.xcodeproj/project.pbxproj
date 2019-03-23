@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F069D1F22460A960016472C /* CapturedImageController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3F069D1E22460A960016472C /* CapturedImageController.mm */; };
 		3F218C04223FA3BA0006E5F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F218C03223FA3BA0006E5F3 /* AppDelegate.swift */; };
 		3F218C06223FA3BA0006E5F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F218C05223FA3BA0006E5F3 /* ViewController.swift */; };
 		3F218C09223FA3BA0006E5F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F218C07223FA3BA0006E5F3 /* Main.storyboard */; };
@@ -20,6 +21,9 @@
 
 /* Begin PBXFileReference section */
 		3D2B6EDE413F4526371D7224 /* Pods_AiLocker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AiLocker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F069D1E22460A960016472C /* CapturedImageController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CapturedImageController.mm; sourceTree = "<group>"; };
+		3F069D2022460AAD0016472C /* CapturedImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CapturedImageController.h; sourceTree = "<group>"; };
+		3F069D2122460AE80016472C /* AiLocker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AiLocker-Bridging-Header.h"; sourceTree = "<group>"; };
 		3F218C00223FA3BA0006E5F3 /* AiLocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiLocker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F218C03223FA3BA0006E5F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F218C05223FA3BA0006E5F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +80,9 @@
 				3F218C0F223FA3BC0006E5F3 /* Info.plist */,
 				3F39C85F22426D1B000B402F /* KeyChainController.swift */,
 				3F39C8612242B733000B402F /* .env */,
+				3F069D1E22460A960016472C /* CapturedImageController.mm */,
+				3F069D2022460AAD0016472C /* CapturedImageController.h */,
+				3F069D2122460AE80016472C /* AiLocker-Bridging-Header.h */,
 			);
 			path = AiLocker;
 			sourceTree = "<group>";
@@ -214,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F218C06223FA3BA0006E5F3 /* ViewController.swift in Sources */,
+				3F069D1F22460A960016472C /* CapturedImageController.mm in Sources */,
 				3F218C04223FA3BA0006E5F3 /* AppDelegate.swift in Sources */,
 				3F39C86022426D1B000B402F /* KeyChainController.swift in Sources */,
 			);
@@ -371,6 +379,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.sekiya.AiLocker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AiLocker/AiLocker-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -390,6 +399,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.sekiya.AiLocker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AiLocker/AiLocker-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

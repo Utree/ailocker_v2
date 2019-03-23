@@ -151,9 +151,9 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     }
     
     // =========================================================================
-    // MARK: - AVCaptureVideoDataOutputSampleBufferDelegate
+    // delegate method
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        print("method called")
+        CapturedImageController.init().testMethod()
     }
     
 }
