@@ -13,6 +13,7 @@ import AVFoundation
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     @IBOutlet weak var settingButton: UIButton!
     @IBOutlet weak var previewView: UIView!
+    @IBOutlet weak var detectionLabel: UILabel!
     
     // カメラからの入出力データをまとめるセッション
     var session: AVCaptureSession!
@@ -166,7 +167,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             let guessResult = cimageCTR.abc((CMSampleBufferGetImageBuffer(sampleBuffer) as! CVPixelBuffer))
             
             // デバッグ用
-            print(guessResult)
+            detectionLabel.text = guessResult
 
             
             if(guessResult == "computer keyboard") {

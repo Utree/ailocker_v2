@@ -56,20 +56,49 @@
                                     <constraint firstAttribute="height" constant="80" id="e3R-jC-0kQ"/>
                                 </constraints>
                             </view>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QCA-yT-hcW">
+                                <rect key="frame" x="30" y="602" width="315" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWJ-rR-5x5">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="MWJ-rR-5x5" secondAttribute="trailing" id="67f-Oz-SLb"/>
+                                    <constraint firstAttribute="bottom" secondItem="MWJ-rR-5x5" secondAttribute="bottom" id="9HB-pi-7YN"/>
+                                    <constraint firstItem="MWJ-rR-5x5" firstAttribute="top" secondItem="QCA-yT-hcW" secondAttribute="top" id="AqM-H6-cUE"/>
+                                    <constraint firstAttribute="height" constant="30" id="KKi-sf-RVZ"/>
+                                    <constraint firstItem="MWJ-rR-5x5" firstAttribute="leading" secondItem="QCA-yT-hcW" secondAttribute="leading" id="hux-eF-nyh"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="SCA-LX-1ld" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3hF-v8-kTF"/>
                             <constraint firstItem="SCA-LX-1ld" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8tk-xi-gJu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QCA-yT-hcW" secondAttribute="trailing" constant="30" id="EZ4-dD-v3b"/>
                             <constraint firstItem="Wls-1G-buz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MHh-Xi-luC"/>
                             <constraint firstItem="Wls-1G-buz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OZi-Yy-vmr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QCA-yT-hcW" secondAttribute="bottom" constant="35" id="T30-Jb-Ugz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wls-1G-buz" secondAttribute="trailing" id="Z3L-zF-Wpf"/>
+                            <constraint firstItem="QCA-yT-hcW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="dcY-cc-kk4"/>
                             <constraint firstItem="SCA-LX-1ld" firstAttribute="firstBaseline" secondItem="Wls-1G-buz" secondAttribute="firstBaseline" id="iFP-1x-0AV"/>
                             <constraint firstItem="SCA-LX-1ld" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pLM-6u-xuB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="detectionLabel" destination="MWJ-rR-5x5" id="VVb-uq-jMg"/>
                         <outlet property="previewView" destination="SCA-LX-1ld" id="fXB-7G-pr2"/>
                         <outlet property="settingButton" destination="eHE-vT-lQG" id="z8T-kU-HSH"/>
                     </connections>
