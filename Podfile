@@ -7,5 +7,5 @@ target 'AiLocker' do
 
   # Pods for AiLocker
   pod 'SVGKit', :git => 'https://github.com/SVGKit/SVGKit.git', :branch => '3.x'
-  pod 'TensorFlowLite', '1.13.1'
+  pod 'TensorFlowLiteGpuExperimental'
 end

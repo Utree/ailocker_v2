@@ -7,16 +7,16 @@ PODS:
     - CocoaLumberjack/Default
   - SVGKit (2.1.0):
     - CocoaLumberjack (~> 3.0)
-  - TensorFlowLite (1.13.1)
+  - TensorFlowLiteGpuExperimental (0.0.1)
 
 DEPENDENCIES:
   - SVGKit (from `https://github.com/SVGKit/SVGKit.git`, branch `3.x`)
-  - TensorFlowLite (= 1.13.1)
+  - TensorFlowLiteGpuExperimental
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - CocoaLumberjack
-    - TensorFlowLite
+    - TensorFlowLiteGpuExperimental
 
 EXTERNAL SOURCES:
   SVGKit:
@@ -31,8 +31,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
   SVGKit: 8a2fc74258bdb2abb54d3b65f3dd68b0277a9c4d
-  TensorFlowLite: 8b9dc4eb32eac0f8cb660c66bca7604da56dcc5a
+  TensorFlowLiteGpuExperimental: 16d9be415bce7b2bba9e0be17e2009fd57428d0f
 
-PODFILE CHECKSUM: 93cb636555d8bac7fb98c946c23250de45a4daed
+PODFILE CHECKSUM: 8e9d96de81d02bb3d634ef4ff5351f3a211546e6
 
 COCOAPODS: 1.5.3

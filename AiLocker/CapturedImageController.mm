@@ -314,4 +314,12 @@ namespace {
     return resultString;
 }
 
+- (void)dealloc {
+#if TFLITE_USE_GPU_DELEGATE
+    if (delegate) {
+        DeleteGpuDelegate(delegate);
+    }
+#endif
+}
+
 @end
