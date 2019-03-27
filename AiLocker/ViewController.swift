@@ -19,6 +19,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     // プレビューレイヤ
     var videoPreviewLayer: AVCaptureVideoPreviewLayer!
     
+    var cimageCTR = CapturedImageController.init()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // 環境変数をセット
@@ -32,6 +34,9 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         super.viewDidAppear(animated)
         // カメラをセットアップ
         initCamera()
+        
+        // モデルを初期化
+        cimageCTR.loadModel()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -153,7 +158,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     // =========================================================================
     // delegate method
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        CapturedImageController.init().testMethod()
+        print(cimageCTR.abc((CMSampleBufferGetImageBuffer(sampleBuffer) as! CVPixelBuffer)))
     }
     
 }

@@ -16,6 +16,10 @@
 		3F39C85E22426913000B402F /* setting_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3F39C85D22426913000B402F /* setting_icon.svg */; };
 		3F39C86022426D1B000B402F /* KeyChainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39C85F22426D1B000B402F /* KeyChainController.swift */; };
 		3F39C8622242B734000B402F /* .env in Resources */ = {isa = PBXBuildFile; fileRef = 3F39C8612242B733000B402F /* .env */; };
+		3FD352BF224BD07B004869EA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3FD352BB224BD07B004869EA /* .gitignore */; };
+		3FD352C0224BD07B004869EA /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3FD352BC224BD07B004869EA /* labels.txt */; };
+		3FD352C1224BD07B004869EA /* mobilenet_quant_v1_224.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 3FD352BD224BD07B004869EA /* mobilenet_quant_v1_224.tflite */; };
+		3FD352C2224BD07B004869EA /* mobilenet_v1_1.0_224.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 3FD352BE224BD07B004869EA /* mobilenet_v1_1.0_224.tflite */; };
 		E89D4180A3AB8221D8883365 /* Pods_AiLocker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B6EDE413F4526371D7224 /* Pods_AiLocker.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +38,10 @@
 		3F39C85D22426913000B402F /* setting_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = setting_icon.svg; sourceTree = "<group>"; };
 		3F39C85F22426D1B000B402F /* KeyChainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainController.swift; sourceTree = "<group>"; };
 		3F39C8612242B733000B402F /* .env */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .env; sourceTree = SOURCE_ROOT; };
+		3FD352BB224BD07B004869EA /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		3FD352BC224BD07B004869EA /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels.txt; sourceTree = "<group>"; };
+		3FD352BD224BD07B004869EA /* mobilenet_quant_v1_224.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobilenet_quant_v1_224.tflite; sourceTree = "<group>"; };
+		3FD352BE224BD07B004869EA /* mobilenet_v1_1.0_224.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobilenet_v1_1.0_224.tflite; sourceTree = "<group>"; };
 		7B916213AAF7518308A1D8F5 /* Pods-AiLocker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiLocker.release.xcconfig"; path = "Pods/Target Support Files/Pods-AiLocker/Pods-AiLocker.release.xcconfig"; sourceTree = "<group>"; };
 		BDEF75A70D56B44811379FC8 /* Pods-AiLocker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiLocker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AiLocker/Pods-AiLocker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,8 +91,20 @@
 				3F069D1E22460A960016472C /* CapturedImageController.mm */,
 				3F069D2022460AAD0016472C /* CapturedImageController.h */,
 				3F069D2122460AE80016472C /* AiLocker-Bridging-Header.h */,
+				3FD352BA224BD07B004869EA /* data */,
 			);
 			path = AiLocker;
+			sourceTree = "<group>";
+		};
+		3FD352BA224BD07B004869EA /* data */ = {
+			isa = PBXGroup;
+			children = (
+				3FD352BB224BD07B004869EA /* .gitignore */,
+				3FD352BC224BD07B004869EA /* labels.txt */,
+				3FD352BD224BD07B004869EA /* mobilenet_quant_v1_224.tflite */,
+				3FD352BE224BD07B004869EA /* mobilenet_v1_1.0_224.tflite */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 		58DF45B11B8C297EF7F1B4A2 /* Frameworks */ = {
@@ -168,7 +188,11 @@
 				3F39C85E22426913000B402F /* setting_icon.svg in Resources */,
 				3F218C0E223FA3BB0006E5F3 /* LaunchScreen.storyboard in Resources */,
 				3F218C0B223FA3BB0006E5F3 /* Assets.xcassets in Resources */,
+				3FD352C2224BD07B004869EA /* mobilenet_v1_1.0_224.tflite in Resources */,
+				3FD352BF224BD07B004869EA /* .gitignore in Resources */,
+				3FD352C0224BD07B004869EA /* labels.txt in Resources */,
 				3F218C09223FA3BA0006E5F3 /* Main.storyboard in Resources */,
+				3FD352C1224BD07B004869EA /* mobilenet_quant_v1_224.tflite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
