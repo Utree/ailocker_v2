@@ -19,6 +19,7 @@
 		3FD352C0224BD07B004869EA /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3FD352BC224BD07B004869EA /* labels.txt */; };
 		3FD352C1224BD07B004869EA /* mobilenet_quant_v1_224.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 3FD352BD224BD07B004869EA /* mobilenet_quant_v1_224.tflite */; };
 		3FD352C2224BD07B004869EA /* mobilenet_v1_1.0_224.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 3FD352BE224BD07B004869EA /* mobilenet_v1_1.0_224.tflite */; };
+		3FD352C4224BEF30004869EA /* splash_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD352C3224BEF30004869EA /* splash_image.png */; };
 		E89D4180A3AB8221D8883365 /* Pods_AiLocker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2B6EDE413F4526371D7224 /* Pods_AiLocker.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		3FD352BC224BD07B004869EA /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels.txt; sourceTree = "<group>"; };
 		3FD352BD224BD07B004869EA /* mobilenet_quant_v1_224.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobilenet_quant_v1_224.tflite; sourceTree = "<group>"; };
 		3FD352BE224BD07B004869EA /* mobilenet_v1_1.0_224.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobilenet_v1_1.0_224.tflite; sourceTree = "<group>"; };
+		3FD352C3224BEF30004869EA /* splash_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_image.png; sourceTree = "<group>"; };
 		7B916213AAF7518308A1D8F5 /* Pods-AiLocker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiLocker.release.xcconfig"; path = "Pods/Target Support Files/Pods-AiLocker/Pods-AiLocker.release.xcconfig"; sourceTree = "<group>"; };
 		BDEF75A70D56B44811379FC8 /* Pods-AiLocker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiLocker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AiLocker/Pods-AiLocker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +85,7 @@
 				3F218C0A223FA3BB0006E5F3 /* Assets.xcassets */,
 				3F218C0C223FA3BB0006E5F3 /* LaunchScreen.storyboard */,
 				3F39C85D22426913000B402F /* setting_icon.svg */,
+				3FD352C3224BEF30004869EA /* splash_image.png */,
 				3F218C0F223FA3BC0006E5F3 /* Info.plist */,
 				3F39C85F22426D1B000B402F /* KeyChainController.swift */,
 				3F39C8612242B733000B402F /* .env */,
@@ -188,6 +191,7 @@
 				3FD352C2224BD07B004869EA /* mobilenet_v1_1.0_224.tflite in Resources */,
 				3FD352C0224BD07B004869EA /* labels.txt in Resources */,
 				3F218C09223FA3BA0006E5F3 /* Main.storyboard in Resources */,
+				3FD352C4224BEF30004869EA /* splash_image.png in Resources */,
 				3FD352C1224BD07B004869EA /* mobilenet_quant_v1_224.tflite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

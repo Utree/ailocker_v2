@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // スプラッシュ画像を表示
+        sleep(2)
         // Override point for customization after application launch.
         // .envから環境変数を読み込み
         guard let path = Bundle.main.path(forResource: ".env", ofType: nil) else {
