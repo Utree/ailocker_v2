@@ -142,6 +142,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         // 登録ボタン
         let action1 = UIAlertAction(title: "登録", style: UIAlertAction.Style.default, handler: { Void in
             if let url = alert.textFields?.first?.text {
+                // Todo: URLの最後のスラッシュを消す処理
+                // Todo: https://をつける処理
                 saveKeyChain(key: "URL", value: url)
                 print(getKeyChain(key: "URL") ?? "failed")
             }
@@ -158,7 +160,53 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     // =========================================================================
     // delegate method
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        print(cimageCTR.abc((CMSampleBufferGetImageBuffer(sampleBuffer) as! CVPixelBuffer)))
+//        アラートはメインスレッドで出す
+        DispatchQueue.main.sync {
+            // 物体検出
+            let guessResult = cimageCTR.abc((CMSampleBufferGetImageBuffer(sampleBuffer) as! CVPixelBuffer))
+            
+            // デバッグ用
+            print(guessResult)
+
+            
+            if(guessResult == "computer keyboard") {
+                // もし、検出結果が"computer keyboard"だったら、ロックする
+                    aiLockerController(alertTitle: "ロックしますか", requestPath: "/lock/")
+            } else if(guessResult == "pencil box") {
+                
+                // もし、検出結果が"Pencil Box"だったら、ロックを解除する
+                    aiLockerController(alertTitle: "ロックしますか", requestPath: "/unlock/")
+            } else {
+                // それ以外なら、何もしない
+            }
+        }
+    }
+    
+    func aiLockerController(alertTitle: String, requestPath: String) {
+        // アラートのインスタンス
+        let alert = UIAlertController(title:alertTitle, message: "", preferredStyle: .alert)
+        // 登録ボタン
+        let action1 = UIAlertAction(title: "はい", style: UIAlertAction.Style.default, handler: { Void in
+            // 通信先のURLを生成
+            let url:NSURL = NSURL(string:getKeyChain(key: "URL")! + requestPath)!
+            
+            // リクエストを生成
+            let request:NSURLRequest  = NSURLRequest(url: url as URL)
+            
+            // 同期通信を開始
+            do {
+                try NSURLConnection.sendSynchronousRequest(request as URLRequest, returning: nil)
+            } catch {
+                print(error)
+            }
+        })
+        // キャンセルボタン
+        let cancel = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler: nil)
+        
+        alert.addAction(action1)
+        alert.addAction(cancel)
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
