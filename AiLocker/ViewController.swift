@@ -22,6 +22,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     var cimageCTR = CapturedImageController.init()
     
+    var counter: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // 環境変数をセット
@@ -161,26 +163,30 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     // =========================================================================
     // delegate method
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-//        アラートはメインスレッドで出す
-        DispatchQueue.main.sync {
-            // 物体検出
-            let guessResult = cimageCTR.abc((CMSampleBufferGetImageBuffer(sampleBuffer) as! CVPixelBuffer))
-            
-            // デバッグ用
-            detectionLabel.text = guessResult
-
-            
-            if(guessResult == "computer keyboard") {
-                // もし、検出結果が"computer keyboard"だったら、ロックする
-                    aiLockerController(alertTitle: "ロックしますか", requestPath: "/lock/")
-            } else if(guessResult == "pencil box") {
+//        １秒に2回実行
+        if counter % 15 == 0 {
+            //        アラートはメインスレッドで出す
+            DispatchQueue.main.sync {
+                // 物体検出
+                let guessResult = cimageCTR.abc((CMSampleBufferGetImageBuffer(sampleBuffer) as! CVPixelBuffer))
                 
-                // もし、検出結果が"Pencil Box"だったら、ロックを解除する
+                // デバッグ用
+                detectionLabel.text = guessResult
+                
+                
+                if(guessResult == "computer keyboard") {
+                    // もし、検出結果が"computer keyboard"だったら、ロックする
+                    aiLockerController(alertTitle: "ロックしますか", requestPath: "/lock/")
+                } else if(guessResult == "pencil box") {
+                    
+                    // もし、検出結果が"Pencil Box"だったら、ロックを解除する
                     aiLockerController(alertTitle: "ロックしますか", requestPath: "/unlock/")
-            } else {
-                // それ以外なら、何もしない
+                } else {
+                    // それ以外なら、何もしない
+                }
             }
         }
+        counter += 1
     }
     
     func aiLockerController(alertTitle: String, requestPath: String) {
