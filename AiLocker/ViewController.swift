@@ -26,8 +26,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // 環境変数をセット
-        loadEnv()
+        // HerokuからngrokのURLを取得
+        getNgrokURL()
         
         // settingButtonに"setting_icon.svg"を適応
         createSettingButton()
@@ -57,11 +57,33 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         self.session = nil
     }
     
-    // 環境変数をセット
-    func loadEnv() {
+    // herokuからngrokのURLを取得
+    func getNgrokURL() {
         let env = ProcessInfo.processInfo.environment
-        saveKeyChain(key: "URL", value: env["SERVER_URL"]!)
-        print(getKeyChain(key: "URL") ?? "failed")
+        // 通信先のURLを生成
+        let url:NSURL = NSURL(string:env["HEROKU_SERVER_URL"]!)!
+        
+        // リクエストを生成
+        let request:NSURLRequest  = NSURLRequest(url: url as URL)
+        
+        // 同期通信を開始
+        var data: NSData?
+        do {
+            let res: AutoreleasingUnsafeMutablePointer<URLResponse?>? = nil
+            data = try NSURLConnection.sendSynchronousRequest(request as URLRequest, returning: res) as NSData
+            
+        } catch {
+            print(error)
+        }
+        
+        if let _data = data {
+            // レスポンスを文字列に変換
+            let getData: NSString = NSString(data:_data as Data, encoding: String.Encoding.utf8.rawValue)!
+            
+            // KeyChainにセット
+            saveKeyChain(key: "URL", value: getData as String)
+            print("getNgrokURL: \(getKeyChain(key: "URL") ?? "failed")")
+        }
     }
     
     // settingButtonに"setting_icon.svg"を適応
